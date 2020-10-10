@@ -17,8 +17,8 @@
     
     //STRUCT che definisce uno stato
     typedef struct {
-        uint8_t red; //varibile per il time_off del canale rosso
-        uint8_t green; //varibile per il time_off del canale verde
+        uint8_t red; //varibile per il time_on del canale rosso
+        uint8_t green; //varibile per il time_on del canale verde
         uint8_t Pred; //varibile per il periodo del canale rosso
         uint8_t Pgreen; //varibile per il periodo del canale verde
         uint8 Tred; //varibile per il CMP_Type del canale rosso

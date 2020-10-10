@@ -1,20 +1,20 @@
 # ASSIGNMENT 2 
 
 ## Richieste
-Le richieste per tale assignment sono esplicitate del README generale
+Le richieste per tale assignment sono esplicitate nel README generale.
 
 
 ## Schematico
 Vi sono presenti i seguenti componenti:
 - CY8CKIT-059 KIT: impostato con "visibile" solo sullo switch interno alla port P2[2] pin 64;
-- PWM_Red: PWM per gestire il colore rosso del LED RGB con clock a 128HZ per avere periodo massimo di 2 secondi;
-- PWM_Green: PWM per gestire il colore verde del LED RGB con clock a 128HZ per avere periodo massimo di 2 secondi;
+- PWM_Red: PWM per gestire il colore rosso del LED RGB, con clock a 128HZ per avere periodo massimo di 2 secondi;
+- PWM_Green: PWM per gestire il colore verde del LED RGB, con clock a 128HZ per avere periodo massimo di 2 secondi;
 - X2 Resistenze da 330 Ohm;
 - X1 Resistenza interna dello switch/pulsante;
 - Led_Red: Pin relativo al canale del rosso;
 - Led_Green: Pin relativo al canale del verde;
 - Debouncer_1: Debouncer per gestire l'antirimbalzo dello switch/pulsante;
-- Button_Pin: Pin relativo allo switch/pulsante interno alla port P2[2] pin 64
+- Button_Pin: Pin relativo allo switch/pulsante interno alla port P2[2] pin 64;
 - Red: rappresentazione del canale rosso del led RGB;
 - Green: rappresentazione del canale verde del led RGB.
 
@@ -28,3 +28,10 @@ Si hanno le seguenti porte con i corrispettivi pin:
 
 ## Firmware
 Nei file di "Header" e di "Source" vi sono esplicitati già i dettagli reativi alle righe di codice presenti
+
+
+## Nota sulla programmazione del elaborato
+Il led RGB assegantoci per l'assignment è un led ad anodo comune. I pattern dati dall'assignment sono stati interpretati come
+onde quadre da fornire ai canali del rosso e del verde. Pertanto, in presenza di un fronte d'onda in salita, il colore sarà
+soppresso e rimarrà tale fino a quando non si presenterà un fronte d'onda opposto. Esempio: nello stato 1 assegnato dal 
+assignment per entrambi i colori (rosso e verde) l'onda quadra è tutta in "Time_on", e quindi il led sarà spento.

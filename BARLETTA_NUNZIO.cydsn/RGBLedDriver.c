@@ -55,7 +55,7 @@ void RGBLed_WriteTRed(uint8 Tred){
 void RGBLed_WriteTGreen(uint8 Tgreen){
     PWM_Green_SetCompareMode(Tgreen);
 }
-//Funzioni che definiscono il time_off del canale rosso e del verde
+//Funzioni che definiscono il time_on del canale rosso e del verde
 void RGBLed_WriteRed(uint8_t red){
     PWM_Red_WriteCompare(red);
 }

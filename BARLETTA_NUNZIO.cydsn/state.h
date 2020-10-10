@@ -41,8 +41,8 @@ static State A_State[] ={
                  { 127, 63,  255,  127, CMP_TYPE_7_RED, CMP_TYPE_7_GREEN}
                         };
 /*Legenda:
-- V_r: valore di time_off del canale rosso;
-- V_g: valore di time_off del canale verde;
+- V_r: valore di time_on del canale rosso;
+- V_g: valore di time_on del canale verde;
 - P_r: periodo onda quadra del canale rosso;
 - P_g: periodo onda quadra del canale verde;
 - CMP_Type_r: valore di compare type del rosso;
