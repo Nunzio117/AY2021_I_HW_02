@@ -9,18 +9,25 @@
  *
  * ========================================
 */
-#include "project.h"
+#include "state.h" //tale header definisce gli stati
+#include "RGBLedDriver.h" //tale header include anche "project.h" e definisce le funzioni usate
 
 int main(void)
 {
-    CyGlobalIntEnable; /* Enable global interrupts. */
-
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-
+    CyGlobalIntEnable;
+    int i=0;
+    
+    RGBLed_Start(); //inizializzazione pwm
+ 
     for(;;)
-    {
-        /* Place your application code here. */
+    {    
+         if(Button_Pin_Read()== 0){ //controllo stato del bottone
+         while(Button_Pin_Read()== 0){};
+            i+=1;
+            if(i==7){
+                i=0;
+             }
+         RGBLed_WriteColor(A_State[i]); // generazione one quadre
+        }
     }
 }
-
-/* [] END OF FILE */
