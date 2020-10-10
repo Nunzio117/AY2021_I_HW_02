@@ -22,12 +22,13 @@ int main(void)
     for(;;)
     {    
          if(Button_Pin_Read()== 0){ //controllo stato del bottone
-         while(Button_Pin_Read()== 0){};
+         while(Button_Pin_Read()== 0){}; /*Permette di cambiare lo stato solo ne momento in cui
+                                           il bottone viene rilasciato*/
             i+=1;
             if(i==7){
                 i=0;
              }
-         RGBLed_WriteColor(A_State[i]); // generazione one quadre
+         RGBLed_WriteColor(A_State[i]); //generazione one quadre
         }
     }
 }
