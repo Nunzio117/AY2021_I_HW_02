@@ -30,8 +30,10 @@ Si hanno le seguenti porte con i corrispettivi pin:
 Nei file di "Header" e di "Source" vi sono esplicitati già i dettagli reativi alle righe di codice presenti
 
 
-## Nota sulla programmazione del elaborato
-Il led RGB assegantoci per l'assignment è un led ad anodo comune. I pattern dati dall'assignment sono stati interpretati come
-onde quadre da fornire ai canali del rosso e del verde. Pertanto, in presenza di un fronte d'onda in salita, il colore sarà
-soppresso e rimarrà tale fino a quando non si presenterà un fronte d'onda opposto. Esempio: nello stato 1 assegnato dal 
-assignment per entrambi i colori (rosso e verde) l'onda quadra è tutta in "Time_on", e quindi il led sarà spento.
+## Nota sulla programmazione dell'elaborato
+Il led RGB assegantoci per l'assignment è un led ad anodo comune. Le onde quadre date dall'assignment sono state interpretate
+come i pattern da fornire ai canali del rosso e del verde. Pertanto, in presenza di un fronte d'onda in salita nello schematico,
+il colore sarà espresso e rimarrà tale fino a quando non si presenterà un fronte d'onda opposto. 
+Esempio: nello stato 1 assegnato dal assignment per entrambi i colori (rosso e verde), l'onda quadra dello schematico è tutta 
+in "Time_on", e quindi il led sarà acceso e di colore giallo. Se avessimo interepreato le onde quadre fornite dal assignemtent
+come onde da creare e non come pattern, il led nello stato 1 del assignment sarebbe stato completamente spento.

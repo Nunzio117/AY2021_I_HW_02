@@ -18,7 +18,7 @@ int main(void)
     int i=0;
     
     RGBLed_Start(); //inizializzazione pwm
- 
+    RGBLed_WriteColor(A_State[i]);
     for(;;)
     {    
          if(Button_Pin_Read()== 0){ //controllo stato del bottone
