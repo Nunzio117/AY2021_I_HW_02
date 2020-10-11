@@ -29,6 +29,8 @@
 #define CMP_TYPE_7_RED   PWM_Red__B_PWM__GREATER_THAN
 #define CMP_TYPE_7_GREEN PWM_Green__B_PWM__LESS_THAN
 
+int i;// variabile per l'incremento degli stai
+
 //Definzione di un array di strutture, definite in RGBLedDriver.h
 static State A_State[] ={
                 // V_r  V_g  P_r   P_g     CMP_Type_r     CMP_Type_g

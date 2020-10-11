@@ -9,27 +9,21 @@
  *
  * ========================================
 */
-#include "state.h" //tale header definisce gli stati
-#include "RGBLedDriver.h" //tale header include anche "project.h" e definisce le funzioni usate
+#include "state.h" //si include l'header che definisce gli stati
+#include "RGBLedDriver.h" /*si include l'header per le funzioni usate e che include 
+                          anche "project.h" */
+#include "InterruptRoutines.h" //si include l'header per la ISR custom
 
 int main(void)
 {
-    CyGlobalIntEnable;
-    int i=0;
+    CyGlobalIntEnable; //Enable global interrupts
+    isr_1_StartEx(Custom_LED_ISR); //inizializzazione della ISR custom
     
+    i=0; //inizializzata in "state.h"
     RGBLed_Start(); //inizializzazione pwm
     RGBLed_WriteColor(A_State[i]); //inizializzazione pwm allo stato 1
     
     for(;;)
-    {    
-         if(Button_Pin_Read()== 0){ //controllo stato del bottone
-         while(Button_Pin_Read()== 0){}; /*Permette di cambiare lo stato solo nel momento in cui
-                                           il bottone viene rilasciato*/
-            i+=1;
-            if(i==7){
-                i=0;
-             }
-         RGBLed_WriteColor(A_State[i]); //generazione one quadre
-        }
+    {  
     }
 }
