@@ -18,11 +18,12 @@ int main(void)
     int i=0;
     
     RGBLed_Start(); //inizializzazione pwm
-    RGBLed_WriteColor(A_State[i]);
+    RGBLed_WriteColor(A_State[i]); //inizializzazione pwm allo stato 1
+    
     for(;;)
     {    
          if(Button_Pin_Read()== 0){ //controllo stato del bottone
-         while(Button_Pin_Read()== 0){}; /*Permette di cambiare lo stato solo ne momento in cui
+         while(Button_Pin_Read()== 0){}; /*Permette di cambiare lo stato solo nel momento in cui
                                            il bottone viene rilasciato*/
             i+=1;
             if(i==7){

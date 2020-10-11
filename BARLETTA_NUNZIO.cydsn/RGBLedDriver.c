@@ -28,12 +28,13 @@ void RGBLed_Start(){
 
 void RGBLed_Stop(){
     PWM_Red_Stop();    //stoppa il pwm red
-    PWM_Green_Stop(); //stoppa il pwm green
-    
+    PWM_Green_Stop(); //stoppa il pwm green   
 }
 
 //Funzione che genera le onde quadre del pwm verde e del pwm rosso a seconda dello stato inserito
 void RGBLed_WriteColor(State s){
+    PWM_Red_WriteCounter(0); //inizializzazione del counter per il periodo del PWM rosso
+    PWM_Green_WriteCounter(0);//inizializzazione del counter per il periodo del PWM green
     RGBLed_WritePred(s.Pred); 
     RGBLed_WritePGreen(s.Pgreen);
     RGBLed_WriteTRed(s.Tred);
