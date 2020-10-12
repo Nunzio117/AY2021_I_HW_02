@@ -10,11 +10,11 @@ Vi sono presenti i seguenti componenti:
 - PWM_Red: PWM per gestire il colore rosso del LED RGB, con clock a 128HZ per avere periodo massimo di 2 secondi;
 - PWM_Green: PWM per gestire il colore verde del LED RGB, con clock a 128HZ per avere periodo massimo di 2 secondi;
 - X2 Resistenze da 330 Ohm;
-- X1 Resistenza interna dello switch/pulsante;
+- X1 Resistenza interna al CY8CKIT-059 KIT legata allo switch/pulsante;
 - Led_Red: Pin relativo al canale del rosso;
 - Led_Green: Pin relativo al canale del verde;
 - Debouncer_1: Debouncer per gestire l'antirimbalzo dello switch/pulsante;
-- Button_Pin: Pin relativo allo switch/pulsante interno alla port P2[2] pin 64;
+- Button_Pin: Pin relativo allo switch/pulsante presente in CY8CKIT-059 KIT;
 - Red: rappresentazione del canale rosso del led RGB;
 - Green: rappresentazione del canale verde del led RGB.
 
