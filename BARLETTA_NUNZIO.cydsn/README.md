@@ -1,3 +1,4 @@
+
 # ASSIGNMENT 2 
 
 ## Richieste
@@ -37,3 +38,4 @@ il colore sarà espresso e rimarrà tale fino a quando non si presenterà un fro
 Esempio: nello stato 1 assegnato dal assignment per entrambi i colori (rosso e verde), l'onda quadra dello schematico è tutta 
 in "Time_on", e quindi il led sarà acceso e di colore giallo. Se avessimo interepreato le onde quadre fornite dal assignemtent
 come onde da creare e non come pattern, il led nello stato 1 del assignment sarebbe stato completamente spento.
+
