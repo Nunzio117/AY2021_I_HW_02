@@ -13,7 +13,7 @@
     #define __INTERRUPT_ROUTINES_H
         
     #include "RGBLedDriver.h"
-    CY_ISR_PROTO(Custom_LED_ISR);
+    CY_ISR_PROTO(Debouncer_ISR);
     
 #endif
 /* [] END OF FILE */

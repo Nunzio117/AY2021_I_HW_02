@@ -16,9 +16,9 @@
 #include "RGBLedDriver.h"
 #include "state.h"
 
-CY_ISR(Custom_LED_ISR)
+CY_ISR(Debouncer_ISR)
 {
-    i+=1;
+    i+=1; //incremento degli stati 
     if(i==7){
         i=0;
     }
